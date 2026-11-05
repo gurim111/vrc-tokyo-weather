@@ -1,0 +1,5 @@
+<!DOCTYPE html><html lang="ja"><meta charset="utf-8"><title>Tokyo weather for VRChat</title>
+<body style="font-family:sans-serif;background:#111;color:#ddd;padding:2em"><h1>東京の天気 (VRChat ワールド用)</h1>
+<p>VRChat のワールドが <code>weather.json</code> を読み込みます。15 分ごとに GitHub Actions が Open-Meteo から更新します。</p>
+<pre id="w">loading…</pre><script>fetch('weather.json?'+Date.now()).then(r=>r.json()).then(j=>w.textContent=JSON.stringify(j,null,1))</script>
+<p>Weather data by <a href="https://open-meteo.com/" style="color:#8cf">Open-Meteo.com</a> (CC BY 4.0)</p></body></html>
